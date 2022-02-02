@@ -4,13 +4,16 @@ import networkx as nx
 
 
 def fibonacci(n: int):
+    result = []
     a = 0
     b = 1
+    result.append(a)
     for _ in range(n):
         tmp = b
         b = a + b
         a = tmp
-    return a
+        result.append(a)
+    return result
 
 
 class MyNodeVisitor(ast.NodeVisitor):
@@ -36,7 +39,7 @@ class MyNodeVisitor(ast.NodeVisitor):
         return str(node)
 
     def visit_Constant(self, node):
-        self.graph.add_node(str(node), label=f'const {node.value}', color="teal")
+        self.graph.add_node(str(node), label=f'const {node.value}', color='teal')
         return str(node)
 
     def visit_Assign(self, node):
@@ -47,7 +50,7 @@ class MyNodeVisitor(ast.NodeVisitor):
         return str(node)
 
     def visit_Subscript(self, node):
-        self.graph.add_node(str(node), label='subscript', color="green")
+        self.graph.add_node(str(node), label='subscript', color='green')
         self.graph.add_edge(str(node), self.visit(node.slice), label='slice')
         self.graph.add_edge(str(node), self.visit(node.value), label='value')
         return str(node)
@@ -76,6 +79,22 @@ class MyNodeVisitor(ast.NodeVisitor):
         self.graph.add_edge(str(node), self.visit(node.target), label='target')
         for b in node.body:
             self.graph.add_edge(str(node), self.visit(b), label='body')
+        return str(node)
+
+    def visit_List(self, node):
+        self.graph.add_node(str(node), label='list', color='orange')
+        for item in node.elts:
+            self.graph.add_edge(str(node), self.visit(item), label='elt')
+        return str(node)
+
+    def visit_Expr(self, node):
+        self.graph.add_node(str(node), label='expr', color='yellow')
+        self.graph.add_edge(str(node), self.visit(node.value), label='value')
+        return str(node)
+
+    def visit_Attribute(self, node):
+        self.graph.add_node(str(node), label=f'attribute {node.attr}', color='brown')
+        self.graph.add_edge(str(node), self.visit(node.value), label='value')
         return str(node)
 
     def visit_children(self, node):
