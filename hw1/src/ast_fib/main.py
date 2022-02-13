@@ -105,10 +105,14 @@ class MyNodeVisitor(ast.NodeVisitor):
         return
 
 
-if __name__ == "__main__":
+def generate_ast(path_to_png: str):
     tree = ast.parse(inspect.getsource(fibonacci))
     v = MyNodeVisitor()
     v.visit(tree)
     G = v.graph
     p = nx.drawing.nx_pydot.to_pydot(G)
-    p.write_png('artifacts/result.png')
+    p.write_png(path_to_png)
+
+
+if __name__ == "__main__":
+    generate_ast('artifacts/result.png')
