@@ -1,0 +1,96 @@
+Run 1 threads:
+time: 0.0009281635284423828 seconds, result: 1.0007851925466296
+
+Run 1 processes:
+time: 0.41017913818359375 seconds, result: 1.0007851925466296
+
+Run 2 threads:
+time: 0.0006761550903320312 seconds, result: 1.0007851925466305
+
+Run 2 processes:
+time: 0.3418753147125244 seconds, result: 1.0007851925466305
+
+Run 3 threads:
+time: 0.0013070106506347656 seconds, result: 1.0007827251465449
+
+Run 3 processes:
+time: 0.40047430992126465 seconds, result: 1.0007827251465449
+
+Run 4 threads:
+time: 0.0013430118560791016 seconds, result: 1.00078519254663
+
+Run 4 processes:
+time: 0.455855131149292 seconds, result: 1.00078519254663
+
+Run 5 threads:
+time: 0.00152587890625 seconds, result: 1.0007851925466305
+
+Run 5 processes:
+time: 0.4509110450744629 seconds, result: 1.0007851925466305
+
+Run 6 threads:
+time: 0.0013470649719238281 seconds, result: 1.0007605186370956
+
+Run 6 processes:
+time: 0.5912210941314697 seconds, result: 1.0007605186370958
+
+Run 7 threads:
+time: 0.0018608570098876953 seconds, result: 1.0007333775709963
+
+Run 7 processes:
+time: 0.6096949577331543 seconds, result: 1.0007333775709961
+
+Run 8 threads:
+time: 0.0017480850219726562 seconds, result: 1.0007851925466307
+
+Run 8 processes:
+time: 0.5701220035552979 seconds, result: 1.0007851925466305
+
+Run 9 threads:
+time: 0.001821279525756836 seconds, result: 1.0007827251465453
+
+Run 9 processes:
+time: 0.6237952709197998 seconds, result: 1.0007827251465453
+
+Run 10 threads:
+time: 0.001795053482055664 seconds, result: 1.0007851925466307
+
+Run 10 processes:
+time: 0.6812798976898193 seconds, result: 1.0007851925466307
+
+Run 11 threads:
+time: 0.002118349075317383 seconds, result: 1.000649488555489
+
+Run 11 processes:
+time: 0.8143799304962158 seconds, result: 1.000649488555489
+
+Run 12 threads:
+time: 0.0019578933715820312 seconds, result: 1.0007605186370954
+
+Run 12 processes:
+time: 1.0833590030670166 seconds, result: 1.0007605186370954
+
+Run 13 threads:
+time: 0.0021860599517822266 seconds, result: 1.0005927414340317
+
+Run 13 processes:
+time: 1.64064621925354 seconds, result: 1.0005927414340317
+
+Run 14 threads:
+time: 0.003793954849243164 seconds, result: 1.0007333775709963
+
+Run 14 processes:
+time: 1.3227479457855225 seconds, result: 1.0007333775709966
+
+Run 15 threads:
+time: 0.0020461082458496094 seconds, result: 1.0006494885554889
+
+Run 15 processes:
+time: 1.1517372131347656 seconds, result: 1.000649488555489
+
+Run 16 threads:
+time: 0.002262115478515625 seconds, result: 1.0006963674220357
+
+Run 16 processes:
+time: 1.5154311656951904 seconds, result: 1.0006963674220357
+
